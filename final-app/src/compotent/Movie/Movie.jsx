@@ -21,8 +21,8 @@ let [movie,setMovie]=useState([])
      <h1 className=' text-center'>Movie</h1>
      <div className="container mt-4">
        <div className="row">
-        {movie.map((ele)=>
-        <div className='col-md-3'>
+        {movie.map((ele,index)=>
+        <div className='col-md-3' key={index}>
           <Link to={`/details/${ele.id}`} className='text-text-decoration-none'>
   <div className="position-relative"> 
    <img src={'https://image.tmdb.org/t/p/w500/'+ele.poster_path}  alt='' className='w-100 rounded rounded-5'    />
